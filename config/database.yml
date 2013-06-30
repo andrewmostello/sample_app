@@ -29,6 +29,6 @@ production:
   encoding: unicode
   database: sample_app_production
   host: localhost
-  username: sample_app
+  username: andrewmostello
   password:
   pool: 5
