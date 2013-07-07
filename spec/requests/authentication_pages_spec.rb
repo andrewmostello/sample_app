@@ -44,6 +44,14 @@ describe "Authentication" do
 
 		end
 
+		describe "with valid information" do
+			let(:user) { FactoryGirl.create(:user) }
+
+			it { should_not have_link('Profile',			href: user_path(user)) }
+			it { should_not have_link('Settings',			href: edit_user_path(user)) }
+
+		end
+
 		describe "authorization" do
 
 			describe "for non-signed-in users" do
